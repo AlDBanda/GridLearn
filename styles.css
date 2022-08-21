@@ -14,12 +14,36 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: 
     'header header header header'
+    'nav nav nav nav'
     'nav main main main'
-    'nav main main main'
-    'nav section section section'
-    'nav aside aside aside'
-    'footer footer footer footer'
-  ;
+    'section section section section'
+    'aside aside aside aside'
+    'footer footer footer footer';
+}
+
+@media screen and (min-width: 500px) {
+
+  /* From 500px upwards */
+  .grid {
+    grid-template-areas:
+      'header header header header'
+      'nav main main main'
+      'nav main main main'
+      'nav section section section'
+      'nav aside aside aside'
+      'footer footer footer footer';
+  }
+}
+
+@media screen and (min-width:750px) {
+  /*From 750px upwards */
+  .grid {
+    grid-template-areas:
+      'header header header header'
+      'nav main main section'
+      'nav main main aside'
+      'footer footer footer footer';
+      }
 }
 
 header {
@@ -45,4 +69,6 @@ section {
 footer {
   grid-area: footer;
 }
+
+
 
